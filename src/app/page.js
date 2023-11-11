@@ -5,10 +5,6 @@ import Image from 'next/image'
 import './globals.css'
 
 export default function Home() {
-
-  const [umur, setUmur] = useState(20);
-  const handlerUmur = () => setUmur(umur+1);
-
   const [nama, setNama] = useState('Nurunnisa Fathanah');
   const [namaBaru, setNamaBaru] = useState('');
 
@@ -38,20 +34,17 @@ export default function Home() {
             <div className="bio-nim-header-banner">
               {/* nim n bio */}
               <p>D121211002</p>
-              <p>IF'21 UH - Berumur {umur} tahun </p>
+              <p>IF'21 - Hasanuddin University </p>
             </div>
           </div>
         </div>
         <div className="cta-banner-wrapper">
+        {/* Input nama baru */}
         <input 
           type="text" 
-          placeholder="Masukkan Nama"
+          placeholder="Ketikkan nama baru"
           onChange={handleUbah}
         />
-        {/* <button onClick={handlerUmur}>
-          <p>Halo!</p>
-        </button> */}
-
         {/* cta */}
         <button style={{marginTop:'24px'}}onClick={handlerGantiNama}>
           <p>Ganti Nama</p>
