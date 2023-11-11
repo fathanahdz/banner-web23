@@ -6,12 +6,17 @@ import './globals.css'
 
 export default function Home() {
 
-  const [hai, setHai] = useState(0);
-  const handlerHaiAdd = () => setHai(hai+1);
+  const [umur, setUmur] = useState(20);
+  const handlerUmur = () => setUmur(umur+1);
 
   const [nama, setNama] = useState('Nurunnisa Fathanah');
-  const handlerGantiNama = () => setNama('Fathanah');
+  const [namaBaru, setNamaBaru] = useState('');
 
+  const handleUbah = (e)=> setNamaBaru(e.target.value)
+  const handlerGantiNama = () => {
+    setNama(namaBaru);
+    setNamaBaru('')
+  }
   return (
     <div className='body'>
       <div className="banner-container">
@@ -33,15 +38,21 @@ export default function Home() {
             <div className="bio-nim-header-banner">
               {/* nim n bio */}
               <p>D121211002</p>
-              <p>IF'21 UH - Hai ke-{hai}</p>
+              <p>IF'21 UH - Berumur {umur} tahun </p>
             </div>
           </div>
         </div>
         <div className="cta-banner-wrapper">
-        {/* cta */}
-        <button onClick={handlerHaiAdd}>
+        <input 
+          type="text" 
+          placeholder="Masukkan Nama"
+          onChange={handleUbah}
+        />
+        {/* <button onClick={handlerUmur}>
           <p>Halo!</p>
-        </button>
+        </button> */}
+
+        {/* cta */}
         <button style={{marginTop:'24px'}}onClick={handlerGantiNama}>
           <p>Ganti Nama</p>
         </button>
