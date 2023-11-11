@@ -10,6 +10,11 @@ export default function Home() {
 
   const handleUbah = (e)=> setNamaBaru(e.target.value)
   const handlerGantiNama = () => {
+    if(namaBaru.trim() === ''){
+      alert('Kamu belum mengetikkan nama. Cek kembali ya');
+      return;
+    }
+
     setNama(namaBaru);
     setNamaBaru('')
   }
