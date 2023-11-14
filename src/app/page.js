@@ -18,6 +18,14 @@ export default function Home() {
     setNama(namaBaru);
     setNamaBaru('')
   }
+
+  const handleKeyDown =(e)=> {
+    if(e.key === 'Enter'){
+      e.preventDefault();
+      handlerGantiNama();
+    }
+  };
+
   return (
     <div className='body'>
       <div className="banner-container">
@@ -48,7 +56,9 @@ export default function Home() {
         <input 
           type="text" 
           placeholder="Ketikkan nama baru"
+          value={namaBaru}
           onChange={handleUbah}
+          onKeyDown={handleKeyDown}
         />
         {/* cta */}
         <button style={{marginTop:'24px'}}onClick={handlerGantiNama}>
