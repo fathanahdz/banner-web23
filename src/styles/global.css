@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+    font-family: Nunito Sans;
+
+  }
+
+  body{
+    display: flex;
+    flex-direction: column;
+  
+    justify-content: center;
+    align-items: center;
+  
+    /* fill container = 100% di figma = 100% di javascript */
+    width: 100%;
+    height: 100vh;
+  
+    background-color: #f4f4f4;
+    gap: 32px;
+  }
+  
