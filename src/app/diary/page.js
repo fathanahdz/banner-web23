@@ -13,27 +13,19 @@ export default function Diary() {
 
 
     const endpointAPI = 'https://6555c14084b36e3a431e403b.mockapi.io/diary'
-    // async function getAPI () {
-    //     try{
-    //         const res = await fetch(endpointAPI)
-    //         const diary = await res.json()
-    //         console.log(diary)
-    //     }
-    //     catch(error) {
-    //         console.log("error fetching data: ${error}")
-    //     }
-    // }
 
-    async function getAPI () {
+    async function getDiary () {
         try{
             const res = await axios.get(endpointAPI)
             const data = res.data
+
+            //ambil judul
             const judul = data.map((item)=>(item.judul))
             setJudul(judul)
 
+            //ambil isi
             const isi_diary = data.map((item)=>(item.isi))
             setIsi_diary(isi_diary)
-            console.log(judul, isi_diary)
         }
         catch(error) {
             console.log("error fetching data: ${error}")
@@ -41,7 +33,7 @@ export default function Diary() {
     }
     
     useEffect(() => {
-        getAPI();
+        getDiary();
     }, [])
 
     return(
