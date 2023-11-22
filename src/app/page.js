@@ -61,8 +61,12 @@ export default function Home() {
           onKeyDown={handleKeyDown}
         />
         {/* cta */}
-        <button style={{marginTop:'24px'}}onClick={handlerGantiNama}>
-          <p>Ganti Nama</p>
+        <button 
+          className={`cta-button ${namaBaru.trim() === "" ? "cta-button-disabled" : "cta-button-enabled"}`}          
+          style={{marginTop:'24px'}}
+          onClick={namaBaru.trim()!== "" ? handlerGantiNama : null}
+          disabled={namaBaru.trim() === ""}>
+          <p>{namaBaru.trim() === "" ? "Disabled" : "Ganti Nama"}</p>
         </button>
         </div>
       </div>

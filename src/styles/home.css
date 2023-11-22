@@ -74,6 +74,7 @@ button{
   align-self: stretch;
   background-color: #1B3155;
   border-radius: 12px;
+  cursor: pointer;
 }
 
 button p{

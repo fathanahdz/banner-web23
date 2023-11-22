@@ -3,7 +3,7 @@
     width: 442px;
     padding: 24px;
     flex-direction: column;
-    align-items: flex-start;
+
     gap: 10px;   
 
     border-radius: 24px;
@@ -31,8 +31,7 @@ ul{
     display: flex;
     flex-direction: column;
     gap: 12px;
-    height: 300
-px;
+    height: 300;
 }
 li{
     list-style: none;
