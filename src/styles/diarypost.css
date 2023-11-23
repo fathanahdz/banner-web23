@@ -3,45 +3,20 @@
     width: 442px;
     padding: 24px;
     flex-direction: column;
-
-    gap: 12px;   
+    align-items: flex-start;
+    gap: 12px;
 
     border-radius: 24px;
     background: #FFF;
     box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.02);
-
 }
 
 .p-diary {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
     align-self: stretch;
-
-    overflow: hidden;
     color: #1E1E1E;
-    text-overflow: ellipsis;
     font-family: Nunito Sans;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    
-}
-
-ul{
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    height: 300;
-
-}
-li{
-    list-style: none;
-    text-decoration: none;
-
-}
-
-h1, p {
-    text-decoration: none;
 }
