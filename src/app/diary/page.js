@@ -45,6 +45,7 @@ export default function Diary() {
                             <div className='diary-container'>
                                 <h1>{judul[idx]}</h1>
                                 <p className='p-diary'>{isi_diary[idx]}</p>
+                                <p>Time</p>
                             </div>
                         </li>
                     ))}
